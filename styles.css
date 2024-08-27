@@ -37,7 +37,6 @@ body {
 .scoreboard {
   min-width: 150px;
   text-align: center;
-  /* border: 1px solid red; */
 }
 
 .home-score-container,
