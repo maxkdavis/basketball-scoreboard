@@ -7,6 +7,17 @@
 /* import roboto font from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -29,10 +40,13 @@ body {
   /* border: 1px solid red; */
 }
 
-.score-container {
+.home-score-container,
+.guest-score-container {
+  box-sizing: border-box;
   background-color: #080001;
   border-radius: 8px;
-  /* border: 1px solid blue; */
+  /* adding border-bottom as a placeholder for .winning class. need to do this to prevent elements shifting down */
+  border-bottom: 4px solid #080001;
   text-align: center;
   margin: 0 0 30px 0;
   padding: 10px 15px;
@@ -70,4 +84,9 @@ h1 {
   border: 2px solid #9aabd8;
   border-radius: 4px;
   padding: 8px;
+}
+
+/* creating a class to highlight the team that's currently in the lead */
+.winning {
+  border-bottom: 4px solid limegreen;
 }
